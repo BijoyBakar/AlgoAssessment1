@@ -1,5 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using AlgoAssessment1;
+
 Console.WriteLine("Hello, World!");
 // See https://aka.ms/new-console-template for more information
 
@@ -31,9 +33,10 @@ foreach (string i in stringnumbers3)
 
 }
 
+List <int> MergeSortingBruh = MergeSort.Msort(IntNumbers1);
 
 
-foreach (int j in IntNumbers1)
-{
-    Console.WriteLine(j);
-}
+//foreach (int j in IntNumbers1)
+//{
+    //Console.WriteLine(j);
+//}
