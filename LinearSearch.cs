@@ -23,6 +23,7 @@ public class LinearSearch
             }
             else if (value > list[x])
             {
+                
                 Math.Abs(value + list[1]);
                 index = x + 1;
             }
@@ -32,9 +33,9 @@ public class LinearSearch
         Console.WriteLine("The number entered appears "+count+" times");
         if (count == 0)
         {
-            Console.WriteLine("The closest index are: ");
+            Console.WriteLine("Number entered was not found but the closest index are: ");
             
-        }
+       }
         
         return index;
     }
