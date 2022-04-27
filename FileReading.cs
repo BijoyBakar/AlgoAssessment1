@@ -4,14 +4,14 @@ public class FileReading
 {
     public static List<int> Read_File(string filename)
     {
-        string[] strList = File.ReadAllLines("../../../Textfiles/" + filename);
-        List<int> intList = new List<int>();
+        string[] stringList = File.ReadAllLines("../../../Textfiles/" + filename);
+        List<int> intgerList = new List<int>();
 
-        foreach (string num in strList)
+        foreach (string x in stringList)
         {
-            intList.Add(Int32.Parse(num));
+            intgerList.Add(Int32.Parse(x));
         }
-        return intList;
+        return intgerList;
     }
 
 }

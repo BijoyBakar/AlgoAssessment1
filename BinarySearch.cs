@@ -4,23 +4,38 @@ public class BinarySearch
 {
     public static int Binary_Search(List<int> list, int value)
     {
-        int lowerBound = 0;
-        int upperBound = list.Count-1;
-        int midPoint = 0;
+        int lower = 0;
+        int upper = list.Count-1;
+        int middle = 0;
+        int position = 0;
 
-        while (lowerBound <= upperBound)
+        while (lower <= upper)
         {
-            midPoint = (lowerBound + upperBound) / 2;
-            if (value < list[midPoint])
+            middle = (lower + upper) / 2;
+            if (value < list[middle])
             {
-                upperBound = midPoint - 1;
+                upper = middle - 1;
             }
-            else if (value > list[midPoint])
+            else if (value > list[middle])
             {
-                lowerBound = midPoint + 1;
+                lower = middle + 1;
             }
-            else return midPoint;
+            else return middle;
         }
-        return midPoint;
+        
+        /*
+        if (list[middle] != value)
+        {
+            string errormessage = ("The number entered cannot be found in the list");
+            Console.WriteLine(errormessage);
+            Console.Write("This value " + value + " shows up 0 times and the closest index are:  " + middle);
+            Console.WriteLine(" ");
+        }
+        */
+
+
+
+
+        return middle;
     }
 }

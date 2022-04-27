@@ -4,12 +4,13 @@ using AlgoAssessment1;
 
 
 
-List<int> intShare_1_256 = FileReading.Read_File("Share_1_256.txt");
-List<int> intShare_2_256 = FileReading.Read_File("Share_2_256.txt");
-List<int> intShare_3_256 = FileReading.Read_File("Share_3_256.txt");
-List<int> intShare_1_2048 = FileReading.Read_File("Share_1_2048.txt");
-List<int> intShare_2_2048 = FileReading.Read_File("Share_2_2048.txt");
-List<int> intShare_3_2048 = FileReading.Read_File("Share_3_2048.txt");
+List<int> intShare_1_256file = FileReading.Read_File("Share_1_256.txt");
+List<int> intShare_2_256file = FileReading.Read_File("Share_2_256.txt");
+List<int> intShare_3_256file = FileReading.Read_File("Share_3_256.txt");
+List<int> intShare_1_2048file = FileReading.Read_File("Share_1_2048.txt");
+List<int> intShare_2_2048file = FileReading.Read_File("Share_2_2048.txt");
+List<int> intShare_3_2048file = FileReading.Read_File("Share_3_2048.txt");
+
 
 
 
@@ -28,6 +29,7 @@ Please select the file you wish to perform algorithms on :
 4) Share_1_2048.txt      
 5) Share_2_2048.txt      
 6) Share_3_2048.txt 
+
     
 Enter: ");
 
@@ -35,28 +37,30 @@ Enter: ");
     int Userinput = Convert.ToInt32(Console.ReadLine());
     if (Userinput == 1)
     {
-        list = intShare_1_256;
+        list = intShare_1_256file;
     }
     else if (Userinput == 2)
     {
-        list = intShare_2_256;
+        list = intShare_2_256file;
     }
     else if (Userinput == 3)
     {
-        list = intShare_3_256;
+        list = intShare_3_256file;
     }
     else if (Userinput == 4)
     {
-        list = intShare_1_2048;
+        list = intShare_1_2048file;
     }
     else if (Userinput == 5)
     {
-        list = intShare_2_2048;
+        list = intShare_2_2048file;
     }
     else if (Userinput == 6)
     {
-        list = intShare_3_2048;
+        list = intShare_3_2048file;
     }
+
+    
 
 
     Console.Write(@"
@@ -165,6 +169,7 @@ Enter: ");
             
             Console.WriteLine(" ");
             Console.WriteLine(" ");
+        
             
             Console.WriteLine("Please enter the number you would like to find index for");
             int index = Convert.ToInt32(Console.ReadLine());
@@ -172,11 +177,7 @@ Enter: ");
             Console.WriteLine("(Binary Search) The index is: " + BinarySearch.Binary_Search(list, index));
 
     }
-    else
-    {
-        
-        
-    }
+
 
         
 

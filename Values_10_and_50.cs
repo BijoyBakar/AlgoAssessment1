@@ -4,22 +4,28 @@ public class Values_10_and_50
 {
     public static List<int> Get_Value(List<int> list)
     {
-        List<int> values = new List<int>();
+        List<int> List_of_values = new List<int>();
+        int ListLength = list.Count;
 
-        if (list.Count == 256)
+        if (ListLength == 256)
         {
-            for(int i = 0; i < list.Count; i = i+10)
+            for(int x = 0; x < ListLength; x = x+10)
             {
-                values.Add(list[i]);
+                List_of_values.Add(list[x]);
             }
         }
-        else if (list.Count == 2048)
+        
+        else if (ListLength == 2048)
         {
-            for(int i = 0; i < list.Count; i = i+50)
+            for(int x = 0; x < ListLength; x = x+50)
             {
-                values.Add(list[i]);
+                List_of_values.Add(list[x]);
             }
         }
-        return values;
+        else
+        {
+            Console.WriteLine("Cannot read file due its size");
+        }
+        return List_of_values;
     }
 }
